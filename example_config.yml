@@ -1,0 +1,28 @@
+consul:
+  enabled: true
+  # consul address
+  address: http://127.0.0.1:8500
+  # portRange will be ignored if a port a specific port has bin passed as argument
+  portRange: 9000-9200
+  # if serviceName is empty a random uuid will be used, the same as the id
+  serviceName: Test Client
+  # sometimes the local dns name is not useful, to resolve the address of the exporter at prometheus
+  exporterAddress: "host.example.com"
+  tags:
+    - foo
+    - bar
+    # In following line '$ENV("SECRET_KEY")' will be replace by the value that 'SecretKey' has in the environment.
+    # This may result in 43-123, if `export SECRET_KEY=42` previous. The value will be evaluated at the startup.
+    # - $ENV("SECRET_KEY")-123
+    # Likewise to the $ENV, $SYSTEM_PROPERTY will be replaced with the value of the Java System Property
+    # - $SYSTEM_PROPERTY("SECRET_KEY")-123
+    # The program args are accessible via $ARG(\d) the number is the index within the args.
+    # - $ARG(0) # will return the absolute classname
+    # $CLASSNAME will be replaced with the classname of the main class. It's like $ARG(0) but stripped of the package path.
+  check:
+    # This allows to add a check to the service which checks if the metrics url is available
+    enabled: true
+    # The check interval, in which the service will be checked
+    checkInterval: "10s"
+    # If the url is not reachable for this certain time, the service will be removed from consul. 1m is the minimum.
+    deregisterPeriod: "1m"

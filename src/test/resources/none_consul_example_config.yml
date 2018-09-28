@@ -1,0 +1,10 @@
+---
+consul:
+  address: 127.0.0.1:8500
+  # portRange will be ignored if a port a specific port has bin passed as argument
+  portRange: 9000-9200
+  # if serviceName is empty a random uuid will be used, the same as the id
+  serviceName: Test Client
+  tags:
+    - foo
+    - bar
