@@ -1,3 +1,5 @@
+![https://search.maven.org/artifact/org.griesbacher.jocose/jocose_javaagent/](https://img.shields.io/maven-central/v/org.griesbacher.jocose/jocose_javaagent.svg)
+
 JOCOSE - *J*mx *O*ver *CO*n*S*ul *E*xporter
 ======
 This exporter uses the original jmx_exporter and combines it with consul.
