@@ -1,4 +1,4 @@
-![https://search.maven.org/artifact/org.griesbacher.jocose/jocose_javaagent/](https://img.shields.io/maven-central/v/org.griesbacher.jocose/jocose_javaagent.svg)
+[![https://search.maven.org/artifact/org.griesbacher.jocose/jocose_javaagent/](https://img.shields.io/maven-central/v/org.griesbacher.jocose/jocose_javaagent.svg)](https://search.maven.org/artifact/org.griesbacher.jocose/jocose_javaagent/)
 
 JOCOSE - *J*mx *O*ver *CO*n*S*ul *E*xporter
 ======
